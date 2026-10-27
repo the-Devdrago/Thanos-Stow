@@ -1,6 +1,6 @@
 # yield-adapter
 
-Optional, opt-in yield-routing adapter for **Stow**, on Stellar/Soroban (Rust, `soroban-sdk` 22).
+Optional, opt-in yield-routing adapter for **Thanos-Stow**, on Stellar/Soroban (Rust, `soroban-sdk` 22).
 
 `savings-vault` custodies principal with no yield logic (by design — see its
 README). This crate is the separate, swappable layer referenced in the root

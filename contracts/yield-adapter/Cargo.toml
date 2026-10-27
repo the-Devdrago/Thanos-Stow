@@ -3,7 +3,7 @@ name = "yield-adapter"
 version = "0.1.0"
 edition = "2021"
 rust-version = "1.74"
-description = "Stow — optional yield-routing adapter for idle savings-vault balances, on Soroban"
+description = "Thanos-Stow — optional yield-routing adapter for idle savings-vault balances, on Soroban"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

@@ -3,7 +3,7 @@ name = "savings-vault"
 version = "0.1.0"
 edition = "2021"
 rust-version = "1.74"
-description = "Stow — non-custodial savings vault (flexible, locked, goal, group, group-split) on Soroban"
+description = "Thanos-Stow — non-custodial savings vault (flexible, locked, goal, group, group-split) on Soroban"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

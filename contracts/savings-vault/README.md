@@ -1,6 +1,6 @@
 # savings-vault
 
-Non-custodial savings vault for **Stow**, on Stellar/Soroban (Rust, `soroban-sdk` 22).
+Non-custodial savings vault for **Thanos-Stow**, on Stellar/Soroban (Rust, `soroban-sdk` 22).
 
 This crate is a **skeleton**. Every entrypoint is stubbed with `unimplemented!()`
 and a `TODO(issue)` comment describing intended behavior and acceptance criteria.

@@ -1,9 +1,9 @@
-# Stow
+# Thanos-Stow
 **Decentralized Savings Platform on Stellar**
 
-Stow is a decentralized savings protocol built on **Stellar using Soroban smart contracts**. It enables individuals and communities to save transparently using stablecoins, with flexible, locked, goal-based, group, and group-split savings mechanisms enforced fully on-chain.
+Thanos-Stow is a decentralized savings protocol built on **Stellar using Soroban smart contracts**. It enables individuals and communities to save transparently using stablecoins, with flexible, locked, goal-based, group, and group-split savings mechanisms enforced fully on-chain.
 
-The project solves the problem of opaque, centralized savings platforms in emerging markets by providing a non-custodial, transparent alternative where users maintain full control of their funds and save in a dollar-denominated stablecoin (USDC) as a hedge against local-currency depreciation. Stow is designed for developers, contributors, and financial communities interested in building open, composable savings infrastructure using low-fee, fast-finality blockchain primitives.
+The project solves the problem of opaque, centralized savings platforms in emerging markets by providing a non-custodial, transparent alternative where users maintain full control of their funds and save in a dollar-denominated stablecoin (USDC) as a hedge against local-currency depreciation. Thanos-Stow is designed for developers, contributors, and financial communities interested in building open, composable savings infrastructure using low-fee, fast-finality blockchain primitives.
 
 ---
 
@@ -25,7 +25,7 @@ The project solves the problem of opaque, centralized savings platforms in emerg
 
 ## 🔑 Onboarding & On/Off-Ramps
 
-Stow is built so mainstream users never have to touch crypto mechanics:
+Thanos-Stow is built so mainstream users never have to touch crypto mechanics:
 
 - **Passkey smart wallets** — accounts are Soroban smart contracts signed with device biometrics (WebAuthn / secp256r1). No seed phrases. Integrate with `passkey-kit` or an OpenZeppelin smart-account SDK.
 - **Sponsored (gasless) fees** — a relayer pays transaction fees so users don't need XLM to make their first deposit.
@@ -36,8 +36,8 @@ Stow is built so mainstream users never have to touch crypto mechanics:
 
 ## 🏗 Architecture Overview
 
-- **Frontend (`apps/web`)**  
-  Next.js application for interacting with Stow smart contracts. Provides a user interface for creating savings accounts, depositing funds, tracking progress, and onboarding via passkey smart wallets.
+- **Frontend (`apps/web` / `stow-frontend`)**  
+  Next.js application for interacting with Thanos-Stow smart contracts. Provides a user interface for creating savings accounts, depositing funds, tracking progress, and onboarding via passkey smart wallets.
 
 - **Backend (`apps/api`)**  
   Node.js API for off-chain services such as indexing contract events, sending notifications, managing user metadata, aggregating analytics, and orchestrating anchor on/off-ramps.
@@ -97,8 +97,8 @@ Before you begin, ensure you have the following installed:
 
 ## 📦 1. Clone the Repository
 ```bash
-git clone https://github.com/your-org/stow.git
-cd stow
+git clone https://github.com/your-org/thanos-stow.git
+cd thanos-stow
 ```
 
 ---
@@ -156,7 +156,7 @@ cargo build --target wasm32-unknown-unknown --release
 ### Deploy Contracts
 ```bash
 stellar contract deploy \
-  --wasm target/wasm32-unknown-unknown/release/stow_contract.wasm \
+  --wasm target/wasm32-unknown-unknown/release/thanos_stow_contract.wasm \
   --source alice \
   --network testnet
 ```
@@ -203,7 +203,7 @@ ANCHOR_HOME_DOMAIN=your-anchor-domain
 ANCHOR_ASSET_CODE=USDC
 
 # Database (if using)
-DATABASE_URL=postgresql://user:password@localhost:5432/stow
+DATABASE_URL=postgresql://user:password@localhost:5432/thanos_stow
 
 # Optional
 REDIS_URL=redis://localhost:6379
@@ -325,12 +325,12 @@ npm run test:integration
 
 ## 💼 Business Model
 
-Stow's fees are transparent and on-chain:
+Thanos-Stow's fees are transparent and on-chain:
 
-- **Performance fee on Tier-1 yield** - a small percentage of yield earned only, never of principal. Stow earns only when users do.
+- **Performance fee on Tier-1 yield** - a small percentage of yield earned only, never of principal. Thanos-Stow earns only when users do.
 - **Optional pool-creation / per-round fee** for group savings.
 
-No token is required to use Stow. Any future governance mechanism would be introduced only after real usage exists.
+No token is required to use Thanos-Stow. Any future governance mechanism would be introduced only after real usage exists.
 
 ---
 
